@@ -1,0 +1,21 @@
+.spinner{
+    display: none;
+}
+.card {
+    padding-bottom: 1em;
+}
+.bootstrap-tagsinput{
+    width: 100%;
+}
+.navbar-horizontal .navbar-brand img {
+    height: 100px;
+}
+.sidenav .navbar-brand, .sidenav .navbar-heading {
+    padding: 2px;
+}
+.navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand > img {
+    max-height: 7rem;
+}
+.sidenav-header {
+    height: 98px;
+}

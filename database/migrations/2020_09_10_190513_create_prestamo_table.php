@@ -15,14 +15,19 @@ class CreatePrestamoTable extends Migration
     {
         Schema::create('prestamo', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('cod_exis')->unsigned();
-            $table->foreign('cod_exis')->references('id')->on('libroexistencia');
-
-            $table->bigInteger('cod_afiliado')->unsigned();
-            $table->foreign('cod_afiliado')->references('id')->on('afiliado');
             $table->dateTime('fecha_prestamo');
             $table->dateTime('fecha_entrega');
+            $table->bigInteger('estadoexistencia_id')->unsigned();
             
+            $table->foreign('estadoexistencia_id')->references('id')->on('estadoexistencia');
+
+            $table->bigInteger('afiliado_id')->unsigned();
+            
+            $table->foreign('afiliado_id')->references('id')->on('afiliado');
+
+            $table->bigInteger('tipoprestamo_id')->unsigned();
+            
+            $table->foreign('tipoprestamo_id')->references('id')->on('tipoprestamo');
 
             $table->timestamps();
         });

@@ -15,11 +15,14 @@ class CreateEstadoexistenciaTable extends Migration
     {
         Schema::create('estadoexistencia', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('estadolibro_id')->unsigned();
+            
+            $table->foreign('estadolibro_id')->references('id')->on('estadolibro');
+           
+            $table->bigInteger('libroexistencia_id')->unsigned();
+            
+            $table->foreign('libroexistencia_id')->references('id')->on('libroexistencia');
             $table->timestamps();
-
-             
-            $table->bigInteger('cod_estado')->unsigned();
-            $table->foreign('cod_estado')->references('id')->on('estadoexistencia');
         });
     }
 

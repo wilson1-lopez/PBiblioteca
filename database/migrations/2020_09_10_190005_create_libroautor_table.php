@@ -16,11 +16,14 @@ class CreateLibroautorTable extends Migration
         Schema::create('libroautor', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('cod_libro')->unsigned();
-            $table->foreign('cod_libro')->references('id')->on('libro');
+            $table->bigInteger('libro_id')->unsigned();
+            
+            $table->foreign('libro_id')->references('id')->on('libro');
 
-            $table->bigInteger('cod_autor')->unsigned();
-            $table->foreign('cod_autor')->references('id')->on('autor');
+            $table->bigInteger('autor_id')->unsigned();
+            
+            $table->foreign('autor_id')->references('id')->on('autor');
+
 
             $table->timestamps();
         });

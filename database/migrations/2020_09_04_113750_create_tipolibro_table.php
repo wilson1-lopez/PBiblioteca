@@ -16,7 +16,7 @@ class CreateTipolibroTable extends Migration
         Schema::create('tipolibro', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('tipo libro');
+            $table->string('tipo_libro');
         });
     }
 

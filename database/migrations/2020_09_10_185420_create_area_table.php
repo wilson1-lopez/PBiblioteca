@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLibrosareaTable extends Migration
+class CreateAreaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,9 @@ class CreateLibrosareaTable extends Migration
      */
     public function up()
     {
-        Schema::create('librosarea', function (Blueprint $table) {
+        Schema::create('area', function (Blueprint $table) {
             $table->id();
- 
-            $table->bigInteger('cod_libro')->unsigned();
-            $table->foreign('cod_libro')->references('id')->on('libro');
-
-             
-            $table->bigInteger('cod_area')->unsigned();
-            $table->foreign('cod_area')->references('id')->on('area');
-
+            $table->string('area');
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ class CreateLibrosareaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('librosarea');
+        Schema::dropIfExists('area');
     }
 }

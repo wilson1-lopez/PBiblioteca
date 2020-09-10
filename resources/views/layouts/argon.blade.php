@@ -23,7 +23,7 @@
     <div class="scrollbar-inner">
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="{{ asset('assets/img/icon.png') }}" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('assets/img/ico.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">

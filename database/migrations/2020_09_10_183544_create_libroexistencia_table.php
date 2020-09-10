@@ -15,9 +15,10 @@ class CreateLibroexistenciaTable extends Migration
     {
         Schema::create('libroexistencia', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-
+            $table->bigInteger('libro_id')->unsigned();
             
+            $table->foreign('libro_id')->references('id')->on('libro');
+            $table->timestamps();
         });
     }
 

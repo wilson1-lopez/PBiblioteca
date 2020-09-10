@@ -15,25 +15,26 @@ class CreateLibroTable extends Migration
     {
         Schema::create('libro', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('nombre');
+             $table->string('nombre');
 
             $table->string('isbn');
             $table->string('titulo');
             $table->string('edicion');
 
               $table->dateTime('fecha');
-            $table->bigInteger('cod_edit')->unsigned();
-            $table->foreign('cod_edit')->references('id')->on('editorial');
+            $table->bigInteger('editorial_id')->unsigned();
+            
+            $table->foreign('editorial_id')->references('id')->on('editorial');
 
-            $table->bigInteger('cod_tlibro')->unsigned();
-            $table->foreign('cod_tlibro')->references('id')->on('tipo_libro');
+            $table->bigInteger('tipolibro_id')->unsigned();
+            
+            $table->foreign('tipolibro_id')->references('id')->on('tipolibro');
 
             
-            $table->bigInteger('cod_pais')->unsigned();
-            $table->foreign('cod_pais')->references('id')->on('pais');
-
-
+            $table->bigInteger('pais_id')->unsigned();
+         
+            $table->foreign('pais_id')->references('id')->on('pais');
+            $table->timestamps();
         });
     }
 

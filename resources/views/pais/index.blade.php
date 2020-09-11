@@ -6,14 +6,19 @@
     <div class="card">
       <div class="card-header border-0">
         <div class="row align-items-center">
+
           <div class="col">
             <h3 class="mb-0">Pais</h3>
           </div>
+
           <div class="col text-right">
             <a href="{{ route('pais.create') }}" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Nuevo</a>
           </div>
+
+          </div>
         </div>
-      </div>
+      
+      
       <div class="table-responsive">
         <table class="table align-items-center table-flush" id="table">
           <thead class="thead-light">
@@ -21,7 +26,8 @@
               <th scope="col">ID</th>
               <th scope="col">Pais</th>
               </tr>
-         
+              
+          </thead>
           
          <tfoot>
            <tr>
@@ -52,16 +58,11 @@
         {data: 'id'},
         {data: 'pais'},
         
-        {data: 'created_at'},
+       
         {data: 'btn' },
       ],
       "columnDefs":[
-      //  {
-      //    "render": function(data, type, row){
-      //      return data +' - '+row['email'];
-      //    },
-      //    "targets": 1
-      //  },
+     
         {
           "visible": false, "targets": [0]
         }

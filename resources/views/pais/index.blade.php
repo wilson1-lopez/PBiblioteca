@@ -14,7 +14,27 @@
           </div>
         </div>
       </div>
-     
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush" id="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Creado</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+             
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
       
     </div>
   </div>

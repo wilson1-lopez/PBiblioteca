@@ -1,5 +1,5 @@
 <?php
-$modulo = 'Libro'
+$modulo = 'libro'
 ?>
 <form action="{{ route($modulo.'.destroy', $id) }}" method="post">
     @csrf

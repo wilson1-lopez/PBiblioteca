@@ -33,12 +33,12 @@
               <td></td>
               <td></td>
               <td></td>
-              </table>
+            
               
               
             </tr>  
           </thead>
-      
+          </table>
     </div>
   </div>
 </div>

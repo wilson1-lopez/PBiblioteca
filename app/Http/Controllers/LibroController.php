@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ConfiguracionController extends Controller
+class LibroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ConfiguracionController extends Controller
      */
     public function index()
     {
-        return view ( 'configuracion.index') ;
+        return view ('libro.index');
     }
 
     /**
@@ -79,6 +79,6 @@ class ConfiguracionController extends Controller
      */
     public function destroy($id)
     {
-        //
+       
     }
 }

@@ -18,3 +18,4 @@ Route::get('dataTableRoles', 'RolesController@dataTable')->name('dataTableRoles'
 
 Route::resource('libro', 'LibroController');
 Route::resource('pais', 'PaisController');
+Route::get('dataTableLibro', 'LibroController@dataTable')->name('dataTableLibro');

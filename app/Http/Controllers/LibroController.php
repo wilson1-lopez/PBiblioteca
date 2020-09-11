@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Libro;
 use Illuminate\Http\Request;
 
 class LibroController extends Controller
@@ -13,9 +13,17 @@ class LibroController extends Controller
      */
     public function index()
     {
-        return view ('libro.index');
+        $lib = Libro::all();
+        return view ('libro.index')->with('lib',$lib);
     }
-
+    public function dataTable()
+    {
+        return DataTables::of(libro::select('id', 'nombre','isbn', 'titulo', 'edicion', 'fecha' , 'editorial_id','tipolibro_id','pais_id' )->get())
+        
+            ->addColumn('btn', 'libro.dataTable.btn')
+            ->rawColumns(['btn'])
+            ->toJson();
+    }
     /**
      * Show the form for creating a new resource.
      *

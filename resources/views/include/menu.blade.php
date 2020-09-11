@@ -45,5 +45,17 @@
                 <span class="nav-link-text">Editorial</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='autor') ? 'active':'' }}" href="{{ route('autor.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">Autor</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='area') ? 'active':'' }}" href="{{ route('area.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">Area</span>
+            </a>
+        </li>
     </ul>
 </div>

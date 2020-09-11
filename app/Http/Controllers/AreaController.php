@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Pais;
+use App\Models\Area;
 use Illuminate\Http\Request;
 
-class PaisController extends Controller
+class AreaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,22 +13,20 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $pa = Pais::all();
-        return view ('pais.index')->with('pa',$pa);
+        
+        $are = Area::all();
+        return view ('area.index')->with('are',$are);
     }
     public function dataTable()
     {
-        return DataTables::of(pais::select('id','pais' )->get())
+        return DataTables::of(pais::select('id','area' )->get())
         
-            ->addColumn('btn', 'pais.dataTable.btn')
+            ->addColumn('btn', 'area.dataTable.btn')
             ->rawColumns(['btn'])
             ->toJson();
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function create()
     {
         //

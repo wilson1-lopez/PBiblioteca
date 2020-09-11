@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Pais;
+use App\Models\Autor;
 use Illuminate\Http\Request;
 
-class PaisController extends Controller
+class AutorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,17 +13,20 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $pa = Pais::all();
-        return view ('pais.index')->with('pa',$pa);
-    }
-    public function dataTable()
-    {
-        return DataTables::of(pais::select('id','pais' )->get())
         
-            ->addColumn('btn', 'pais.dataTable.btn')
-            ->rawColumns(['btn'])
-            ->toJson();
-    }
+            $au = Autor::all();
+            return view ('autor.index')->with('au',$au);
+        }
+        public function dataTable()
+        {
+            return DataTables::of(pais::select('id','autor' )->get())
+            
+                ->addColumn('btn', 'autor.dataTable.btn')
+                ->rawColumns(['btn'])
+                ->toJson();
+        }
+    
+
     /**
      * Show the form for creating a new resource.
      *

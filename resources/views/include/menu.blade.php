@@ -31,6 +31,12 @@
                 <span class="nav-link-text">Libro</span>
             </a>
         </li>
-       
+
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='pais') ? 'active':'' }}" href="{{ route('pais.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">Pais</span>
+            </a>
+        </li>
     </ul>
 </div>

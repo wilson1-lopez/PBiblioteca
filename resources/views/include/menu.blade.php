@@ -38,5 +38,12 @@
                 <span class="nav-link-text">Pais</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='editorial') ? 'active':'' }}" href="{{ route('editorial.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">Editorial</span>
+            </a>
+        </li>
     </ul>
 </div>

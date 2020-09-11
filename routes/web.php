@@ -15,3 +15,5 @@ Route::get('dataTableUSer', 'UserController@dataTable')->name('dataTableUser');
 
 Route::resource('roles', 'RolesController');
 Route::get('dataTableRoles', 'RolesController@dataTable')->name('dataTableRoles');
+
+Route::resource('configuracion', 'ConfiguracionController');

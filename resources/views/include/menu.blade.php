@@ -24,6 +24,11 @@
             </a>
         </li>
        
-
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='configuracion') ? 'active':'' }}" href="{{ route('configuracion.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">configuracion</span>
+            </a>
+        </li>
     </ul>
 </div>

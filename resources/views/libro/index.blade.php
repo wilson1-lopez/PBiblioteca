@@ -27,24 +27,32 @@
               <th scope="col">editorial_id</th>
               <th scope="col">tipolibro_id</th>
               <th scope="col">pais_id</th>
+             
+            </tr>
+         
+          
+          <tfoot>
+            <tr>
+            <td></td>
+              <td></td>
+            <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            
-              
-              
-            </tr>  
-          </thead>
-          </table>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-
-
-
 @endsection
 @section('scripts')
 <script>

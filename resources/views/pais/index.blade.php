@@ -19,10 +19,8 @@
           <thead class="thead-light">
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Creado</th>
-              <th scope="col">Opciones</th>
+              <th scope="col">Pais</th>
+              
             </tr>
           </thead>
           <tbody></tbody>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pais;
 use Illuminate\Http\Request;
 
 class PaisController extends Controller
@@ -13,9 +13,17 @@ class PaisController extends Controller
      */
     public function index()
     {
-        return view ('pais.index');
+        $pa = Pais::all();
+        return view ('pais.index')->with('pa',$pa);
     }
-
+    public function dataTable()
+    {
+        return DataTables::of(pais::select('id', 'pais', )->get())
+        
+            ->addColumn('btn', 'pais.dataTable.btn')
+            ->rawColumns(['btn'])
+            ->toJson();
+    }
     /**
      * Show the form for creating a new resource.
      *
